@@ -40,7 +40,19 @@ HANGMAN_PICS = ["""
     O   |
    /|\  |
    / \  |
-       ==="""]
+       ===
+       ""","""
+    +---+
+    O   |
+   /|\  |
+  _/ \  |
+       ===""","""
+    +---+
+    O   |
+   /|\  |      YOU ARE HANGED
+  _/ \_ |
+       ==="""
+    ]
 
 COUNT = 999
 
@@ -69,3 +81,9 @@ def game_over(lst, str):
         if lst[i] != str[i]:
             return False
     return True
+
+def print_word(word):
+    result = ""
+    for element in word:
+        result += element + " "
+    print(result)
