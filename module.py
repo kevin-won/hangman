@@ -1,3 +1,9 @@
+"""
+A module that defines useful functions for script.py.
+
+Author: Kevin J. Won
+Date: June 10, 2022
+"""
 words = []
 
 with open("data.txt", "r") as f:

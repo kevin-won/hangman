@@ -2,10 +2,11 @@
 A script to play hangman.
 
 Author: Kevin J. Won
+Date: June 10, 2022
 """
-
 import module
 import random
+import getpass
 
 words = module.words
 hangman_pics = module.HANGMAN_PICS
@@ -33,7 +34,7 @@ if num_players == 1:
     for _ in range(len(word)):
         current_state.append("")
 else:
-    word = input("Type in a word you want the other player to guess: ")
+    word = getpass.getpass(prompt = "Type in a word you want the other player to guess: ")
     for i in range(len(word)):
         if word[i] == " ":
             current_state.append(" ")
